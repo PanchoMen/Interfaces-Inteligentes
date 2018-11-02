@@ -2,19 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Linterna : MonoBehaviour {
+public class Linterna : MonoBehaviour
+{
+
 
     Light linterna;
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         linterna = gameObject.GetComponent<Light>();
+// GameController.controlador.Encender = OnOff();
 
     }
-	
-	// Update is called once per frame
-	void Update () {
-        if(Input.GetKeyUp(KeyCode.L)){
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetKeyUp(KeyCode.L)){
             OnOff();
         }
 	}

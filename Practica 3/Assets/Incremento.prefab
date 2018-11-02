@@ -22,13 +22,12 @@ GameObject:
   - component: {fileID: 33381429418244698}
   - component: {fileID: 23032507566019678}
   - component: {fileID: 136359313190645714}
-  - component: {fileID: 54389191689672058}
   m_Layer: 0
   m_Name: Incremento
   m_TagString: Incremento
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4556015770694026
 Transform:
@@ -85,21 +84,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1051716719675842}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!54 &54389191689672058
-Rigidbody:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1051716719675842}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!136 &136359313190645714
 CapsuleCollider:
   m_ObjectHideFlags: 1

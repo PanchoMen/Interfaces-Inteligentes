@@ -2,10 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class GameController : MonoBehaviour {
 
+    public delegate void linterna();
+    public delegate void actualizar();
+
     public static GameController controlador;
+
+    public linterna Encender;
+    public actualizar Actualizacion;
 
     delegate void Controller();
     Controller controller;
@@ -26,6 +31,10 @@ public class GameController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+        Actualizacion();
+        if (Input.GetKeyUp(KeyCode.L))
+        {
+            Encender();
+        }
+    }
 }
