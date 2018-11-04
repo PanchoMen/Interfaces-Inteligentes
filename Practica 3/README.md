@@ -13,3 +13,23 @@
 
 ## Implementación:
 
+
+### Linterna
+
+Se ha añadido un foco que representa una linterna que posee el jugador, es posible encenderla y apagarla pulsando la **tecla "L"**
+
+![Demostración de uso de la linterna](https://github.com/PanchoMen/Interfaces-Inteligentes/blob/master/Recursos/Practica%203/Linterna.gif "Uso de la Linterna")
+
+---
+
+### Totems
+
+Se han añadido 2 tipos de totems:
+* Totem de color blanco:
+
+  Cuando el jugador colisiona con un totem de este tipo, su poder **incrementa en 10 puntos**;
+* Totem de color rosado:
+
+  Cuando el jugador colisiona con este tipo de totem, su poder **decrementa en 10 puntos**, los totems cambian de color durante 10 segundos y reducen el doble de puntos en cada colisión durante este tiempo.
+ 
+![Demostración de las coliciones](https://github.com/PanchoMen/Interfaces-Inteligentes/blob/master/Recursos/Practica%203/Colisiones.gif "Colisiones")
