@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33547362735015722}
   - component: {fileID: 23639523940337808}
   - component: {fileID: 136944864691857440}
-  - component: {fileID: 114930449864630396}
+  - component: {fileID: 114196020427960872}
   m_Layer: 0
   m_Name: Decremento
   m_TagString: Decremento
@@ -85,7 +85,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1115211214774076}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &114930449864630396
+--- !u!114 &114196020427960872
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -93,7 +93,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1115211214774076}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bed8b0709ab7a43b5ba4010eb18607d5, type: 3}
+  m_Script: {fileID: 11500000, guid: 553d3f22369b24877a5d9cfd40cdafaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   contador: 0

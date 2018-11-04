@@ -215,7 +215,8 @@ Prefab:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114622590360972478, guid: 4b9294fe1a05745e698922247a475051, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 4b9294fe1a05745e698922247a475051, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &187217811
@@ -258,6 +259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7314805178db4cd5be22cc83ddd2a27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  poder: 0
 --- !u!1001 &276874252
 Prefab:
   m_ObjectHideFlags: 0
@@ -871,7 +873,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1822241415}
   - component: {fileID: 1822241414}
-  - component: {fileID: 1822241416}
   m_Layer: 0
   m_Name: Linterna
   m_TagString: Linterna
@@ -929,14 +930,20 @@ Transform:
   m_Father: {fileID: 1107603270}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 4.8710003, y: 90, z: 0}
---- !u!114 &1822241416
+--- !u!1 &1832646420 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 149790, guid: 7737647c22c1fc64a88d5cd030c352ce,
+    type: 2}
+  m_PrefabInternal: {fileID: 562061931}
+--- !u!114 &1832646426
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1822241413}
+  m_GameObject: {fileID: 1832646420}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 382e5158c1e764d04bf3e93a4b0d2002, type: 3}
+  m_Script: {fileID: 11500000, guid: 3398fb5f12b1e4d90a1dc6bcc9c5a081, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  linterna: {fileID: 1822241414}
