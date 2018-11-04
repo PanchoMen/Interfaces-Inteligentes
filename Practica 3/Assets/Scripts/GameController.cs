@@ -1,19 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
+
+public delegate void DelegadoEventos();
+public delegate void DelegadoColisiones();
 
 public class GameController : MonoBehaviour {
 
-    public delegate void linterna();
-    public delegate void actualizar();
+    public int poder;
+
+    private string title;
 
     public static GameController controlador;
 
-    public linterna Encender;
-    public actualizar Actualizacion;
-
-    delegate void Controller();
-    Controller controller;
+    public event DelegadoEventos Encender;
+    public event DelegadoColisiones ColisionTipoB;
 
     private void Awake() {
         if(controlador == null) {
@@ -26,15 +29,33 @@ public class GameController : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-		
-	}
+        poder = 100;
+
+        title = "Poder: ";
+        GameObject.Find("Poder").GetComponent<Text>().text = (title + poder);
+    }
 	
 	// Update is called once per frame
 	void Update () {
-        Actualizacion();
+
+        Mensajepoder();
+
+        Linterna();
+    }
+
+    void Mensajepoder(){
+        GameObject.Find("Poder").GetComponent<Text>().text = (title + poder);
+    }
+
+    void Linterna(){
         if (Input.GetKeyUp(KeyCode.L))
         {
             Encender();
         }
+    }
+
+    public void ColTipoB()
+    {
+        ColisionTipoB();
     }
 }
