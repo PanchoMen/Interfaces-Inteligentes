@@ -14,9 +14,7 @@ public class Jugador : MonoBehaviour {
     }
 	
 	// Update is called once per frame
-	void Update () {
-
-    }
+	void Update () { }
 
    /*private void OnCollisionEnter(Collision collision)
     {
