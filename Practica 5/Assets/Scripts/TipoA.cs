@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class TipoA : MonoBehaviour
 {
+    public Renderer color;
+    public Color RColor;
 
     // Use this for initialization
     void Start() {
-        GameController.controlador.CambiarTamano += CambiarTamanio;
+        color = gameObject.GetComponent<Renderer>();
+        GameController.controlador.ColisionTipoA += CambiaColor;
+
     }
 
     // Update is called once per frame
@@ -15,12 +19,22 @@ public class TipoA : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        //Aumentar poder a los objetos B y cambiar color
-        GameController.controlador.ColTipoA();
+        //Si A colisiona con C:
+            //los objetos C aumentan el tamaño y los objeto A cambian de color
+        if (collision.gameObject.CompareTag("TipoC"))
+        {
+            GameController.controlador.ColTipoAC();
+        }
+
     }
 
-    void CambiarTamanio(float tam){
-        Debug.Log("Cambiando Tamaño");
-        gameObject.GetComponent<Transform>().localScale += new Vector3(tam, tam, tam);
+    void CambiaColor(Color color_)
+    {
+        RColor = color_;
+        Debug.Log("ESTOY CAMBIANDO DE COLOR");
+        // Aplica el color especificado
+        color.material.color = color_;
     }
+
+
 }

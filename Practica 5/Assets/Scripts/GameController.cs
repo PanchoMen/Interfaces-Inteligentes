@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public delegate void DelegadoEventos();
 public delegate void DelegadoTamano(float tamano);
+public delegate void DelegadoColor(Color color);
 
 public class GameController : MonoBehaviour {
 
@@ -16,8 +17,8 @@ public class GameController : MonoBehaviour {
     public static GameController controlador;
 
     public event DelegadoEventos Encender;
-    public event DelegadoEventos ColisionTipoA;
-    public event DelegadoEventos ColisionTipoB;
+    public event DelegadoColor ColisionTipoA;
+    public event DelegadoColor Boton;
     public event DelegadoTamano CambiarTamano;
 
     private void Awake() {
@@ -57,13 +58,14 @@ public class GameController : MonoBehaviour {
         }
     }
 
-    public void ColTipoB(){
-        ColisionTipoB();
+    public void ColTipoAC(){
+        ColisionTipoA(new Color(Random.value, Random.value, Random.value));
+        CambiarTamano(0.2f);
+        poder += 10;
     }
 
-    public void ColTipoA()
-    {
-        ColisionTipoA();
-        poder += 10;
+    public void PressButton(){
+        Debug.Log("BOTON PULSADO");
+        Boton(new Color(Random.value, Random.value, Random.value));
     }
 }

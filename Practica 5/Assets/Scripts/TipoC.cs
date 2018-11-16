@@ -5,20 +5,35 @@ using UnityEngine;
 public class TipoC : MonoBehaviour {
 
     public int direccion;
-    public Rigidbody rb;
+    //public Rigidbody rb;
     public Vector3 movement;
 
     // Use this for initialization
     void Start () {
-        GameController.controlador.ColisionTipoB += mover;
-        rb = GetComponent<Rigidbody>();
-
+        GameController.controlador.CambiarTamano += CambiarTamanio;
     }
 	
 	// Update is called once per frame
 	void Update () {
 		
 	}
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        //Si A colisiona con C:
+        //los objetos C aumentan el tamaño y los objeto A cambian de color
+        if (collision.gameObject.CompareTag("TipoA"))
+        {
+            GameController.controlador.ColTipoAC();
+        }
+
+    }
+
+    void CambiarTamanio(float tam)
+    {
+        Debug.Log("Cambiando Tamaño");
+        gameObject.GetComponent<Transform>().localScale += new Vector3(tam, tam, tam);
+    }
 
     void mover()
     {
